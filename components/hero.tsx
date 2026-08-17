@@ -25,7 +25,7 @@ export function Hero() {
           <p className="mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
             Xin chào, tôi là{" "}
             <strong className="font-semibold text-foreground">Khằng</strong> —
-            giáo viên tiếng Hàn với hơn 8 năm đồng hành cùng học viên từ những
+            giáo viên tiếng Hàn với hơn 5 năm đồng hành cùng học viên từ những
             nét <span className="font-serif text-foreground">한글</span> đầu
             tiên đến giao tiếp trôi chảy và chinh phục <strong>TOPIK</strong>.
             Tôi có các lớp học online, nhóm nhỏ và lộ trình được thiết kế dành
