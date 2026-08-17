@@ -75,7 +75,7 @@ export function Certifications() {
                       {c.detail}
                     </p>
                     <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary/80">
-                      Nhấn để xem chứng từ
+                      Nhấn để xem chứng chỉ
                     </p>
                   </div>
                 </button>
