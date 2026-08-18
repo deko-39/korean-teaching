@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { testimonials } from "@/lib/data";
 
 const ITEMS_PER_PAGE = 3;
-const AUTO_SLIDE_MS = 4500;
+const AUTO_SLIDE_MS = 3000;
 
 const getTestimonialRating = (seed: string) => {
   const total = seed
@@ -77,7 +77,7 @@ export function Testimonials() {
 
                         return (
                           <figure
-                            key={t.name}
+                            key={t.id}
                             className="flex min-h-[270px] h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-sm sm:min-h-[290px] sm:p-6"
                           >
                             <Quote className="size-6 text-accent/40" />

@@ -1,12 +1,4 @@
-export type Level =
-  | "Beginner"
-  | "Beginner1B"
-  | "Beginner2"
-  | "Intermediate"
-  | "Intermediate2"
-  | "Advanced"
-  | "Advanced2"
-  | "TOPIK";
+export type Level = "Beginner1A" | "Beginner1B" | "Intermediate1A";
 
 export type ScheduleFilter = Level | "All";
 
@@ -23,37 +15,22 @@ export type ClassSession = {
 };
 
 export const levelColor: Record<Level, string> = {
-  Beginner: "bg-jade/15 text-jade border-jade/30",
-  Beginner1B: "bg-jade/20 text-jade border-jade/35",
-  Beginner2: "bg-jade/25 text-jade border-jade/40",
-  Intermediate: "bg-gold/20 text-gold border-gold/40",
-  Intermediate2: "bg-gold/30 text-gold border-gold/50",
-  Advanced: "bg-accent/15 text-accent border-accent/30",
-  Advanced2: "bg-accent/25 text-accent border-accent/40",
-  TOPIK: "bg-primary/15 text-primary border-primary/30",
+  Beginner1A: "bg-jade/15 text-jade border-jade/30",
+  Beginner1B: "bg-primary/15 text-primary border-primary/30",
+  Intermediate1A: "bg-gold/20 text-gold border-gold/40",
 };
 
 export const levelLabels: Record<Level, string> = {
-  Beginner: "Sơ cấp 1A",
+  Beginner1A: "Sơ cấp 1A",
   Beginner1B: "Sơ cấp 1B",
-  Beginner2: "Sơ cấp 2",
-  Intermediate: "Trung cấp 1A",
-  Intermediate2: "Trung cấp 2",
-  Advanced: "Cao cấp",
-  Advanced2: "Cao cấp 2",
-  TOPIK: "TOPIK",
+  Intermediate1A: "Trung cấp 1A",
 };
 
 export const scheduleFilters: { value: ScheduleFilter; label: string }[] = [
   { value: "All", label: "Tất cả" },
-  { value: "Beginner", label: "Sơ cấp 1A" },
+  { value: "Beginner1A", label: "Sơ cấp 1A" },
   { value: "Beginner1B", label: "Sơ cấp 1B" },
-  { value: "Beginner2", label: "Sơ cấp 2" },
-  { value: "Intermediate", label: "Trung cấp 1A" },
-  { value: "Intermediate2", label: "Trung cấp 2" },
-  { value: "Advanced", label: "Cao cấp" },
-  { value: "Advanced2", label: "Cao cấp 2" },
-  { value: "TOPIK", label: "TOPIK" },
+  { value: "Intermediate1A", label: "Trung cấp 1A" },
 ];
 
 export const dayLabels: Record<ClassSession["day"], string> = {
@@ -99,38 +76,38 @@ const createClassId = ({ title, day, start }: ClassSessionInput) =>
 
 const classSessions: ClassSessionInput[] = [
   {
-    title: "Khởi đầu với Hangeul",
+    title: "Tiếng Hàn sơ cấp 1A",
     korean: "한글 기초",
     day: "Tue",
     start: "21:00",
     end: "23:00",
-    level: "Beginner",
+    level: "Beginner1A",
     seatsLeft: 3,
     format: "Group",
   },
   {
-    title: "Khởi đầu với Hangeul",
+    title: "Tiếng Hàn sơ cấp 1A",
     korean: "한글 기초",
     day: "Sat",
     start: "21:00",
     end: "23:00",
-    level: "Beginner",
+    level: "Beginner1A",
     seatsLeft: 3,
     format: "Group",
   },
   {
-    title: "Khởi đầu với Hangeul",
+    title: "Tiếng Hàn sơ cấp 1A",
     korean: "한글 기초",
     day: "Sun",
     start: "21:00",
     end: "23:00",
-    level: "Beginner",
+    level: "Beginner1A",
     seatsLeft: 3,
     format: "Group",
   },
   {
-    title: "Khởi đầu với Hangeul",
-    korean: "한글 기초",
+    title: "Tiếng Hàn sơ cấp 1B",
+    korean: "한국어 초급1B",
     day: "Wed",
     start: "21:00",
     end: "23:00",
@@ -139,8 +116,8 @@ const classSessions: ClassSessionInput[] = [
     format: "Group",
   },
   {
-    title: "Khởi đầu với Hangeul",
-    korean: "한글 기초",
+    title: "Tiếng Hàn sơ cấp 1B",
+    korean: "한국어 초급1B",
     day: "Thu",
     start: "21:00",
     end: "23:00",
@@ -149,8 +126,8 @@ const classSessions: ClassSessionInput[] = [
     format: "Group",
   },
   {
-    title: "Khởi đầu với Hangeul",
-    korean: "한글 기초",
+    title: "Tiếng Hàn sơ cấp 1B",
+    korean: "한국어 초급1B",
     day: "Fri",
     start: "21:00",
     end: "23:00",
@@ -159,22 +136,22 @@ const classSessions: ClassSessionInput[] = [
     format: "Group",
   },
   {
-    title: "Tiếng Hàn trung cấp 1",
-    korean: "일상 회화",
+    title: "Tiếng Hàn trung cấp 1A",
+    korean: "한국어 중급1A",
     day: "Sat",
     start: "14:30",
     end: "16:30",
-    level: "Intermediate",
+    level: "Intermediate1A",
     seatsLeft: 2,
     format: "Group",
   },
   {
-    title: "Tiếng Hàn trung cấp 1",
-    korean: "일상 회화",
+    title: "Tiếng Hàn trung cấp 1A",
+    korean: "한국어 중급1A",
     day: "Sun",
     start: "14:30",
     end: "16:30",
-    level: "Intermediate",
+    level: "Intermediate1A",
     seatsLeft: 2,
     format: "Group",
   },
@@ -196,7 +173,7 @@ export type Certification = {
 export const certifications: Certification[] = [
   {
     title: "TOPIK Cấp 6",
-    issuer: "Korean Foundation (KF), Hàn Quốc",
+    issuer: "NIIED - Viện giáo dục quốc tế quốc gia, Hàn Quốc",
     year: "2022",
     detail:
       "Đạt TOPIK Cấp 6 – cấp độ cao nhất của Kỳ thi Năng lực Tiếng Hàn (TOPIK), chứng minh khả năng sử dụng tiếng Hàn thành thạo trong môi trường học thuật và chuyên nghiệp, bao gồm giao tiếp, biên phiên dịch và xử lý tài liệu chuyên ngành.",
@@ -217,7 +194,9 @@ export const certifications: Certification[] = [
     detail:
       "Hoàn thành chương trình đào tạo tiếng Hàn chuyên sâu tại Trung tâm Ngôn ngữ Đại học Sogang với tư cách nghiên cứu sinh nhận học bổng toàn phần của quỹ Korean Foundation, phát triển toàn diện bốn kỹ năng nghe, nói, đọc, viết cùng khả năng giao tiếp học thuật và chuyên nghiệp trong môi trường quốc tế.",
     images: [
-      "/images/report_card.JPG",
+      "/images/report1.PNG",
+      "/images/report2.PNG",
+      "/images/report3.PNG",
       "/images/graduation.JPG",
       "/images/graduation2.JPG",
     ],
@@ -278,12 +257,23 @@ export const phrases: Phrase[] = [
 ];
 
 export type Testimonial = {
+  id: string;
   quote: string;
   name: string;
   role: string;
 };
 
-export const testimonials: Testimonial[] = [
+type TestimonialInput = Omit<Testimonial, "id">;
+
+const createTestimonialId = ({ name, role, quote }: TestimonialInput) =>
+  `${name}-${role}-${quote.slice(0, 48)}`
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .toLowerCase();
+
+const testimonialInputs: TestimonialInput[] = [
   {
     quote:
       "Cô giáo dạy dễ hiểu, nhiệt tình. Giáo trình dễ tiếp thu.\nMong muốn: trong giờ luyện nghe em muốn nghe kĩ hơn. (Muốn cô Hằng đồng hành cùng chúng em trong quá trình học tập ở Việt Nam)",
@@ -329,14 +319,14 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "Cô giáo ko quá nghiêm khắc cũng ko quá dễ dãi, vừa đủ để tạo động lực cảm hứng học tập cho học viên ạ.\nMong muốn: em muốn nhiều bài tập về nhà hơn ạ - tạm thời hiện tại em chưa muốn thử gì nhưng cho em hỏi là app từ điển Hàn - Việt hoặc từ điển Hàn - Anh nào dùng ok ạ.",
-    name: "Phương",
-    role: "Sơ cấp 1A",
+    name: "Hường",
+    role: "Sơ cấp → TOPIK 4",
   },
   {
     quote:
       "Từ mới mở rộng hơn trong sách, có những vd dễ hiểu rõ hơn về cấu trúc câu. Cô giáo giảng dễ hiểu.\nMong muốn: cho nhiều bài tập hơn đi ạ, nếu được thì cho bọn e thêm bài nói nữa, muốn thử: thay phiên nhau đóng 1 cảnh kinh điển trong K drama 🤡.",
     name: "Ngân",
-    role: "Sơ cấp 1A",
+    role: "Sơ cấp → TOPIK 4",
   },
   {
     quote:
@@ -345,3 +335,10 @@ export const testimonials: Testimonial[] = [
     role: "Trung cấp 3",
   },
 ];
+
+export const testimonials: Testimonial[] = testimonialInputs.map(
+  (testimonial) => ({
+    ...testimonial,
+    id: createTestimonialId(testimonial),
+  }),
+);

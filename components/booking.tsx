@@ -30,6 +30,13 @@ export function Booking() {
       return;
     }
 
+    if (fieldName === "phone") {
+      event.currentTarget.setCustomValidity(
+        "Vui lòng nhập số điện thoại hợp lệ",
+      );
+      return;
+    }
+
     if (fieldName === "class") {
       event.currentTarget.setCustomValidity("Vui lòng chọn một lớp học");
       return;
@@ -157,6 +164,7 @@ export function Booking() {
                   const payload = {
                     name: String(formData.get("name") ?? "").trim(),
                     email: String(formData.get("email") ?? "").trim(),
+                    phone: String(formData.get("phone") ?? "").trim(),
                     className: String(formData.get("class") ?? "").trim(),
                     message: String(formData.get("message") ?? "").trim(),
                   };
@@ -205,6 +213,20 @@ export function Booking() {
                       onInput={resetRequiredValidity}
                     />
                   </Field>
+                  <Field label="Số điện thoại" name="phone">
+                    <input
+                      required
+                      name="phone"
+                      type="tel"
+                      placeholder="09xxxxxxxx"
+                      className="input-base"
+                      onInvalid={handleRequiredInvalid}
+                      onInput={resetRequiredValidity}
+                    />
+                  </Field>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
                   <Field label="Địa chỉ email" name="email">
                     <input
                       required
@@ -216,30 +238,29 @@ export function Booking() {
                       onInput={resetRequiredValidity}
                     />
                   </Field>
-                </div>
-
-                <Field label="Lớp mong muốn" name="class">
-                  <select
-                    required
-                    name="class"
-                    className="input-base"
-                    defaultValue=""
-                    onInvalid={handleRequiredInvalid}
-                    onInput={resetRequiredValidity}
-                  >
-                    <option value="" disabled>
-                      Chọn một lớp…
-                    </option>
-                    {classOptions.map((c) => (
-                      <option key={c.id} value={c.title}>
-                        {c.title} ({levelLabels[c.level]})
+                  <Field label="Lớp mong muốn" name="class">
+                    <select
+                      required
+                      name="class"
+                      className="input-base"
+                      defaultValue=""
+                      onInvalid={handleRequiredInvalid}
+                      onInput={resetRequiredValidity}
+                    >
+                      <option value="" disabled>
+                        Chọn một lớp…
                       </option>
-                    ))}
-                    <option value="not-sure">
-                      Chưa chắc — hãy tư vấn giúp tôi
-                    </option>
-                  </select>
-                </Field>
+                      {classOptions.map((c) => (
+                        <option key={c.id} value={c.title}>
+                          {c.title} ({levelLabels[c.level]})
+                        </option>
+                      ))}
+                      <option value="not-sure">
+                        Chưa chắc — hãy tư vấn giúp tôi
+                      </option>
+                    </select>
+                  </Field>
+                </div>
 
                 <Field label="Lời nhắn" name="message">
                   <textarea

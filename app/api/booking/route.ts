@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 type BookingPayload = {
   name: string;
   email: string;
+  phone: string;
   className: string;
   message: string;
 };
@@ -14,7 +15,7 @@ const isValidPayload = (value: unknown): value is BookingPayload => {
 
   const candidate = value as Record<string, unknown>;
 
-  return ["name", "email", "className", "message"].every(
+  return ["name", "email", "phone", "className", "message"].every(
     (key) => typeof candidate[key] === "string",
   );
 };
@@ -44,6 +45,7 @@ export async function POST(request: Request) {
   const normalizedPayload = {
     name: payload.name.trim(),
     email: payload.email.trim(),
+    phone: payload.phone.trim(),
     className: payload.className.trim(),
     message: payload.message.trim(),
     submittedAt: new Date().toISOString(),
@@ -52,10 +54,14 @@ export async function POST(request: Request) {
   if (
     !normalizedPayload.name ||
     !normalizedPayload.email ||
+    !normalizedPayload.phone ||
     !normalizedPayload.className
   ) {
     return NextResponse.json(
-      { error: "Vui lòng điền đầy đủ họ tên, email và lớp mong muốn" },
+      {
+        error:
+          "Vui lòng điền đầy đủ họ tên, số điện thoại, email và lớp mong muốn",
+      },
       { status: 400 },
     );
   }
