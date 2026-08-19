@@ -194,9 +194,9 @@ export const certifications: Certification[] = [
     detail:
       "Hoàn thành chương trình đào tạo tiếng Hàn chuyên sâu tại Trung tâm Ngôn ngữ Đại học Sogang với tư cách nghiên cứu sinh nhận học bổng toàn phần của quỹ Korean Foundation, phát triển toàn diện bốn kỹ năng nghe, nói, đọc, viết cùng khả năng giao tiếp học thuật và chuyên nghiệp trong môi trường quốc tế.",
     images: [
-      "/images/report1.PNG",
-      "/images/report2.PNG",
-      "/images/report3.PNG",
+      "/images/report1.png",
+      "/images/report2.png",
+      "/images/report3.png",
       "/images/graduation.JPG",
       "/images/graduation2.JPG",
     ],
