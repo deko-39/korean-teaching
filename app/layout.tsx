@@ -19,10 +19,10 @@ const notoSerif = Noto_Serif_KR({
 
 export const metadata: Metadata = {
   title: {
-    default: "함께 한국어 | Học tiếng Hàn cùng cô Khằng",
-    template: "%s | 함께 한국어",
+    default: "Khằng과 함께 | Học tiếng Hàn cùng cô Khằng",
+    template: "%s | Khằng과 함께",
   },
-  applicationName: "함께 한국어",
+  applicationName: "Khằng과 함께",
   description:
     "Giáo viên tiếng Hàn được chứng nhận với lộ trình học online và luyện thi TOPIK từ sơ cấp đến cao cấp. Xem chứng chỉ, lịch học theo giờ Việt Nam và đặt buổi học thử miễn phí.",
   keywords: [
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Khằng" }],
   creator: "Khằng",
-  publisher: "함께 한국어",
+  publisher: "Khằng과 함께",
   category: "education",
   openGraph: {
     type: "website",
     locale: "vi_VN",
-    siteName: "함께 한국어",
-    title: "함께 한국어 | Học tiếng Hàn cùng cô Khằng",
+    siteName: "Khằng과 함께",
+    title: "Khằng과 함께 | Học tiếng Hàn cùng cô Khằng",
     description:
       "Khám phá lớp học tiếng Hàn online, luyện thi TOPIK và lộ trình cá nhân hóa cùng cô Khằng.",
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "함께 한국어 | Học tiếng Hàn cùng cô Khằng",
+    title: "Khằng과 함께 | Học tiếng Hàn cùng cô Khằng",
     description:
       "Lớp học tiếng Hàn online, luyện thi TOPIK và buổi học thử miễn phí cùng cô Khằng.",
     images: ["/images/teacher-profile.png"],

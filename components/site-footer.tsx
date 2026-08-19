@@ -23,7 +23,7 @@ export function SiteFooter() {
               <span className="flex size-9 items-center justify-center rounded-md bg-primary-foreground font-serif text-lg font-bold text-primary">
                 한
               </span>
-              <span className="font-serif text-lg font-bold">함께 한국어</span>
+              <span className="font-serif text-lg font-bold">Khằng과 함께</span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-primary-foreground/70">
               Lớp học tiếng Hàn trực tiếp cùng giáo viên được chứng nhận. Từ
@@ -72,7 +72,7 @@ export function SiteFooter() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60 sm:flex-row">
           <p>
-            © {copyrightYear} 함께 한국어 · Mrs. Khằng . All rights reserved
+            © {copyrightYear} Khằng과 함께 · Mrs. Khằng . All rights reserved
           </p>
           <p className="font-serif">감사합니다 · Cảm ơn bạn đã ghé thăm</p>
         </div>

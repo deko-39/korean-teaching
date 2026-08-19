@@ -52,7 +52,7 @@ export function SiteHeader() {
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-serif text-base font-bold text-foreground">
-              함께 한국어
+              Khằng과 함께
             </span>
             <span className="text-[11px] tracking-wide text-muted-foreground">
               cùng Khằng

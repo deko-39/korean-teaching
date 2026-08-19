@@ -16,7 +16,10 @@ export function Hero() {
           </span>
 
           <h1 className="mt-5 text-balance font-serif text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-            재미있게 같이 배우는 한국어
+            <span className="inline-block whitespace-nowrap">재미있게</span>{" "}
+            <span className="inline-block whitespace-nowrap">
+              배우는 한국어
+            </span>{" "}
             <span className="mt-2 block text-2xl font-medium text-muted-foreground sm:text-3xl">
               Học tiếng Hàn theo cách đầy hứng khởi.
             </span>
