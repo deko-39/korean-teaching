@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
+import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
@@ -86,6 +87,20 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${notoSans.variable} ${notoSerif.variable} bg-background`}
     >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RMGY2XT4TE"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RMGY2XT4TE');
+          `}
+        </Script>
+      </head>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
